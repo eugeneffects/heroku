@@ -2,16 +2,19 @@
   "name": "heroku",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && parcel build src/index.html --public-url='/tfjs-yolo-tiny-demo/'",
+    "serve": "parcel src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "@tensorflow/tfjs": "^0.13.2",
+    "ejs": "^3.1.5",
     "tfjs-yolo-tiny": "1.0.1"
   },
   "devDependencies": {
